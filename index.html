@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MacSoft — Helping Malaysian distributors integrate AutoCount ERP with AI sales analytics and inventory intelligence. Demand forecasting, stock alerts, and dashboards from Skudai, Johor.">
+  <meta name="keywords" content="MacSoft, AutoCount ERP, AI sales analytics, inventory intelligence, demand forecasting, stock alerts, Malaysian distributor, Skudai Johor">
+  <title>MacSoft — AutoCount ERP + AI Intelligence for Malaysian Distributors</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- Background Effects -->
+  <canvas id="particles-canvas"></canvas>
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+
+  <!-- ======== NAVIGATION ======== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="logo.png" alt="MacSoft Logo" class="nav-logo-img">
+        <span>Mac<span class="gradient-text">Soft</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#problems">Challenges</a>
+        <a href="#solution">Solution</a>
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#contact" class="nav-cta">Get Started</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ======== HERO SECTION ======== -->
+  <section class="hero" id="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          AI-Powered ERP Intelligence — From Skudai, Johor
+        </div>
+        <h1 class="hero-title">
+          <span class="gradient-text">MacSoft</span><br>
+          AutoCount ERP + AI Intelligence
+        </h1>
+        <p class="hero-description">
+          Helping Malaysian distributors integrate AutoCount ERP with AI sales analytics and inventory intelligence — demand forecasting, stock alerts, and real-time dashboards that drive smarter decisions.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">
+            <span>🚀</span> Contact Us Today
+          </a>
+          <a href="#how-it-works" class="btn-secondary">
+            <span>▶</span> See How It Works
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-value" data-count="85">0%</div>
+            <div class="stat-label">Faster Inventory Decisions</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" data-count="10">0x</div>
+            <div class="stat-label">Faster Sales Analytics</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" data-count="99">0%</div>
+            <div class="stat-label">Forecast Accuracy</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-glow"></div>
+        <div class="hero-image-wrapper">
+          <img src="hero.png" alt="MacSoft AI Agent visualization" loading="eager">
+          <!-- Floating Cards -->
+          <div class="floating-card floating-card-1">
+            <div class="card-icon cyan">📊</div>
+            <div class="card-title">Stock Alert</div>
+            <div class="card-value">5 items below reorder level</div>
+          </div>
+          <div class="floating-card floating-card-2">
+            <div class="card-icon purple">🤖</div>
+            <div class="card-title">Demand Forecast Ready</div>
+            <div class="card-value">Q3 projections updated</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== PROBLEMS SECTION ======== -->
+  <section class="section section-large" id="problems">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">The Challenge</span>
+        <h2 class="section-title">
+          Why Distributors Struggle with <span class="gradient-text">Efficiency</span>
+        </h2>
+        <p class="section-subtitle">
+          Malaysian distributors face growing complexity in sales tracking, inventory management, and demand planning — leading to missed opportunities and costly overstock.
+        </p>
+      </div>
+      <div class="problem-grid">
+        <div class="problem-card reveal reveal-delay-1">
+          <div class="problem-icon red">⏰</div>
+          <h3>Blind Inventory Decisions</h3>
+          <p>Without real-time stock visibility, distributors overstock slow-movers and run out of best-sellers — costing margins and customers.</p>
+        </div>
+        <div class="problem-card reveal reveal-delay-2">
+          <div class="problem-icon amber">🔄</div>
+          <h3>Disconnected Sales Data</h3>
+          <p>Sales trends buried across spreadsheets and AutoCount reports make it nearly impossible to spot opportunities quickly.</p>
+        </div>
+        <div class="problem-card reveal reveal-delay-3">
+          <div class="problem-icon orange">📉</div>
+          <h3>Reactive, Not Proactive</h3>
+          <p>Without demand forecasting, distributors are always reacting — restocking after stockouts and discounting after overstock piles up.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SOLUTION / AUTOCOUNT SECTION ======== -->
+  <section class="section section-large" id="solution">
+    <div class="container">
+      <div class="solution-grid">
+        <div class="solution-visual reveal">
+          <div class="solution-visual-glow"></div>
+          <img src="autocount-feature.png" alt="AutoCount integration dashboard" loading="lazy">
+        </div>
+        <div class="reveal">
+          <span class="section-label">The Solution</span>
+          <h2 class="section-title">
+            AI Intelligence,<br>Built on <span class="gradient-text-secondary">AutoCount ERP</span>
+          </h2>
+          <p class="section-subtitle">
+            MacSoft integrates directly with AutoCount ERP to deliver AI-powered sales analytics, demand forecasting, and inventory intelligence — purpose-built for Malaysian distributors.
+          </p>
+          <div class="solution-features">
+            <div class="solution-feature-item">
+              <div class="feature-dot cyan">📈</div>
+              <div>
+                <h4>AI Sales Analytics</h4>
+                <p>Visualise sales performance by product, region, and salesperson — with AI-powered trend detection and opportunity alerts.</p>
+              </div>
+            </div>
+            <div class="solution-feature-item">
+              <div class="feature-dot purple">📊</div>
+              <div>
+                <h4>Demand Forecasting</h4>
+                <p>Predict future demand with machine learning models trained on your AutoCount sales history — plan smarter, not harder.</p>
+              </div>
+            </div>
+            <div class="solution-feature-item">
+              <div class="feature-dot green">🔔</div>
+              <div>
+                <h4>Smart Stock Alerts</h4>
+                <p>Real-time notifications for low stock, overstock, slow-moving items, and reorder suggestions — never miss a critical threshold.</p>
+              </div>
+            </div>
+            <div class="solution-feature-item">
+              <div class="feature-dot pink">📋</div>
+              <div>
+                <h4>Interactive Dashboards</h4>
+                <p>Live dashboards that pull directly from AutoCount ERP — inventory health, sales velocity, margin analysis, all in one view.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FEATURES SECTION ======== -->
+  <section class="section section-large" id="features">
+    <div class="container">
+      <div class="reveal" style="text-align: center;">
+        <span class="section-label">Capabilities</span>
+        <h2 class="section-title" style="margin-left: auto; margin-right: auto;">
+          Everything You Need to<br><span class="gradient-text">Distribute Smarter</span>
+        </h2>
+        <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
+          MacSoft goes beyond basic reporting. It's an intelligent layer on your AutoCount ERP that learns and adapts to your distribution business.
+        </p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card reveal reveal-delay-1">
+          <div class="feature-card-icon">🧠</div>
+          <h3>Contextual Learning</h3>
+          <p>MacSoft learns your product mix, seasonal patterns, and customer buying behaviour to sharpen forecasts over time.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-2">
+          <div class="feature-card-icon">⚡</div>
+          <h3>Real-Time ERP Sync</h3>
+          <p>All data syncs instantly with AutoCount ERP — no delays, no batch processing, always up-to-date dashboards.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-3">
+          <div class="feature-card-icon">🔒</div>
+          <h3>Secure & Compliant</h3>
+          <p>Enterprise-grade security with data encryption, audit trails, and compliance with Malaysian business regulations.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-1">
+          <div class="feature-card-icon">📱</div>
+          <h3>Multi-Platform Access</h3>
+          <p>Access dashboards and alerts via web, mobile, or WhatsApp — your business intelligence goes wherever you go.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-2">
+          <div class="feature-card-icon">📈</div>
+          <h3>Predictive Insights</h3>
+          <p>AI-driven demand forecasting, sales trend analysis, and smart stock replenishment recommendations.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-3">
+          <div class="feature-card-icon">🤝</div>
+          <h3>Team Collaboration</h3>
+          <p>Multi-user access with role-based permissions. Sales, warehouse, and management — all on the same page.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== HOW IT WORKS SECTION ======== -->
+  <section class="section section-large" id="how-it-works">
+    <div class="container">
+      <div class="reveal" style="text-align: center;">
+        <span class="section-label">Process</span>
+        <h2 class="section-title" style="margin-left: auto; margin-right: auto;">
+          How <span class="gradient-text">MacSoft</span> Works
+        </h2>
+        <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
+          Getting started is simple. MacSoft integrates into your existing AutoCount ERP in four easy steps.
+        </p>
+      </div>
+      <div class="steps-container">
+        <div class="step-card reveal reveal-delay-1">
+          <div class="step-number">1</div>
+          <h3>Connect AutoCount ERP</h3>
+          <p>Link your AutoCount database with our secure integration. Setup takes less than 5 minutes.</p>
+        </div>
+        <div class="step-card reveal reveal-delay-2">
+          <div class="step-number">2</div>
+          <h3>AI Learns Your Data</h3>
+          <p>MacSoft analyses your sales history, inventory patterns, and product catalogue automatically.</p>
+        </div>
+        <div class="step-card reveal reveal-delay-3">
+          <div class="step-number">3</div>
+          <h3>Get Smart Insights</h3>
+          <p>Receive demand forecasts, stock alerts, and interactive dashboards tailored to your distribution business.</p>
+        </div>
+        <div class="step-card reveal reveal-delay-4">
+          <div class="step-number">4</div>
+          <h3>Scale & Grow</h3>
+          <p>Make data-driven decisions, reduce waste, and grow your distribution business with confidence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== STATS SECTION ======== -->
+  <section class="stats-section" id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card reveal reveal-delay-1">
+          <div class="big-number">85%</div>
+          <div class="stat-desc">Faster inventory decisions</div>
+        </div>
+        <div class="stat-card reveal reveal-delay-2">
+          <div class="big-number">10x</div>
+          <div class="stat-desc">Faster sales analytics</div>
+        </div>
+        <div class="stat-card reveal reveal-delay-3">
+          <div class="big-number">99.5%</div>
+          <div class="stat-desc">Demand forecast accuracy</div>
+        </div>
+        <div class="stat-card reveal reveal-delay-4">
+          <div class="big-number">24/7</div>
+          <div class="stat-desc">Real-time stock monitoring</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CTA SECTION ======== -->
+  <section class="cta-section" id="contact">
+    <div class="container">
+      <div class="cta-box reveal">
+        <h2 class="cta-title">
+          Ready to <span class="gradient-text">Transform</span> Your Distribution Business?
+        </h2>
+        <p class="cta-subtitle">
+          Get in touch with our team in Skudai, Johor. We'll show you how MacSoft supercharges your AutoCount ERP.
+        </p>
+        <div class="cta-contact-grid">
+          <div class="cta-contact-item">
+            <span class="cta-contact-icon">📍</span>
+            <div>
+              <strong>Visit Us</strong>
+              <p>No. 67A, Jalan Pulai 21,<br>Taman Pulai Utama,<br>81300 Skudai, Johor, Malaysia</p>
+            </div>
+          </div>
+          <div class="cta-contact-item">
+            <span class="cta-contact-icon">📞</span>
+            <div>
+              <strong>Call Us</strong>
+              <p><a href="tel:+60756231111">+607-562 3111</a></p>
+            </div>
+          </div>
+          <div class="cta-contact-item">
+            <span class="cta-contact-icon">✉️</span>
+            <div>
+              <strong>Email Us</strong>
+              <p><a href="mailto:sales@macsoft.my">sales@macsoft.my</a></p>
+            </div>
+          </div>
+          <div class="cta-contact-item">
+            <span class="cta-contact-icon">💬</span>
+            <div>
+              <strong>WhatsApp</strong>
+              <p><a href="https://wa.me/60107729999" target="_blank" rel="noopener">+60 10-772 9999</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="cta-actions" style="margin-top: 2rem;">
+          <a href="mailto:sales@macsoft.my" class="btn-primary">
+            <span>✉️</span> Email Us
+          </a>
+          <a href="https://wa.me/60107729999" target="_blank" rel="noopener" class="btn-secondary btn-whatsapp">
+            <span>💬</span> WhatsApp Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <img src="logo.png" alt="MacSoft Logo" class="nav-logo-img">
+            <span>Mac<span class="gradient-text">Soft</span></span>
+          </a>
+          <p>Helping Malaysian distributors integrate AutoCount ERP with AI sales analytics and inventory intelligence — demand forecasting, stock alerts, and dashboards from Skudai, Johor.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#solution">AutoCount Integration</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+60756231111">📞 +607-562 3111</a></li>
+            <li><a href="mailto:sales@macsoft.my">✉️ sales@macsoft.my</a></li>
+            <li><a href="https://wa.me/60107729999" target="_blank" rel="noopener">💬 WhatsApp</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Location</h4>
+          <ul>
+            <li>No. 67A, Jalan Pulai 21,</li>
+            <li>Taman Pulai Utama,</li>
+            <li>81300 Skudai, Johor,</li>
+            <li>Malaysia 🇲🇾</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 MacSoft. All rights reserved.</span>
+        <div class="footer-socials">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="https://wa.me/60107729999" aria-label="WhatsApp" target="_blank" rel="noopener">💬</a>
+          <a href="mailto:sales@macsoft.my" aria-label="Email">✉️</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======== SCRIPTS ======== -->
+  <script src="script.js"></script>
+</body>
+</html>
