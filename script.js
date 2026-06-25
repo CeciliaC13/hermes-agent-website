@@ -1,5 +1,5 @@
 // ============================================
-// Hermes Agent Website — Interactive Scripts
+// MacSoft AI Assistant Website — Interactive Scripts
 // ============================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -138,32 +138,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealElements.forEach(el => revealObserver.observe(el));
 
-  // ---- Counter Animation ----
-  const statValues = document.querySelectorAll('.stat-value[data-count]');
-
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const target = parseInt(el.dataset.count);
-        const suffix = el.textContent.replace(/[0-9]/g, '');
-        let current = 0;
-        const increment = target / 60;
-        const timer = setInterval(() => {
-          current += increment;
-          if (current >= target) {
-            current = target;
-            clearInterval(timer);
-          }
-          el.textContent = Math.floor(current) + suffix;
-        }, 16);
-        counterObserver.unobserve(el);
-      }
-    });
-  }, { threshold: 0.5 });
-
-  statValues.forEach(el => counterObserver.observe(el));
-
   // ---- Smooth Scroll for Anchor Links ----
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -177,36 +151,114 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ---- Tilt Effect on Feature Cards ----
-  const featureCards = document.querySelectorAll('.feature-card');
+  // ---- CRUD Tabs Switcher ----
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  const tabContents = document.querySelectorAll('.crud-tab-content');
 
-  featureCards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      const rotateX = (y - centerY) / 20;
-      const rotateY = (centerX - x) / 20;
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
-    });
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Deactivate all buttons & contents
+      tabButtons.forEach(b => b.classList.remove('active'));
+      tabContents.forEach(c => c.style.display = 'none');
 
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+      // Activate selected
+      btn.classList.add('active');
+      const activeTabId = btn.getAttribute('data-tab');
+      document.getElementById(activeTabId).style.display = 'block';
     });
   });
 
-  // ---- Typing Effect for Hero Badge ----
-  const badge = document.querySelector('.hero-badge');
-  if (badge) {
-    badge.style.opacity = '0';
-    badge.style.transform = 'translateY(10px)';
-    setTimeout(() => {
-      badge.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-      badge.style.opacity = '1';
-      badge.style.transform = 'translateY(0)';
-    }, 200);
+  // ---- Screenshot to AutoCount Automation Simulation ----
+  const stepUpload = document.getElementById('simStepUpload');
+  const stepDetails = document.getElementById('simStepDetails');
+  const stepSuccess = document.getElementById('simStepSuccess');
+  const scanOverlay = document.getElementById('simScanOverlay');
+  const btnRestart = document.getElementById('btnRestartSimulation');
+  
+  let simTimers = [];
+
+  function runSimulation() {
+    // Clear any active timers
+    simTimers.forEach(t => clearTimeout(t));
+    simTimers = [];
+
+    // Reset display states
+    stepUpload.style.display = 'block';
+    stepDetails.style.display = 'none';
+    stepSuccess.style.display = 'none';
+    scanOverlay.style.display = 'block';
+
+    // Timer for step 2 (Extraction)
+    const t1 = setTimeout(() => {
+      stepUpload.style.display = 'none';
+      scanOverlay.style.display = 'none';
+      stepDetails.style.display = 'block';
+    }, 3000);
+    simTimers.push(t1);
+
+    // Timer for step 3 (AutoCount update Success)
+    const t2 = setTimeout(() => {
+      stepDetails.style.display = 'none';
+      stepSuccess.style.display = 'block';
+    }, 6000);
+    simTimers.push(t2);
+  }
+
+  // Start the simulation cycle
+  runSimulation();
+
+  if (btnRestart) {
+    btnRestart.addEventListener('click', runSimulation);
+  }
+
+  // ---- Form Submission handler ----
+  const inquiryForm = document.getElementById('inquiryForm');
+  const successMessage = document.getElementById('formSuccessMessage');
+
+  if (inquiryForm) {
+    inquiryForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Collect input values
+      const name = document.getElementById('inputName').value;
+      const company = document.getElementById('inputCompany').value;
+      const whatsapp = document.getElementById('inputWhatsApp').value;
+      const email = document.getElementById('inputEmail').value;
+      const message = document.getElementById('inputMessage').value;
+
+      // Log values or transmit (no backend in static files)
+      console.log('Inquiry submitted:', { name, company, whatsapp, email, message });
+
+      // Animate form hide and show success message
+      inquiryForm.style.transition = 'opacity 0.3s ease';
+      inquiryForm.style.opacity = '0';
+      setTimeout(() => {
+        inquiryForm.style.display = 'none';
+        successMessage.style.display = 'block';
+      }, 3000);
+    });
+  }
+
+  // ---- Tilt Effect on Cards (Desktop Only) ----
+  const tiltCards = document.querySelectorAll('.crud-card, .step-card, .simulation-box');
+
+  if (window.innerWidth > 768) {
+    tiltCards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = (y - centerY) / 30;
+        const rotateY = (centerX - x) / 30;
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+      });
+    });
   }
 
   // ---- Parallax on Hero Image ----
